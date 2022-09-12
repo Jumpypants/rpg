@@ -113,4 +113,4 @@ var possibleEnemies = [[{
   dropNum: 1
 }]];
 
-var enemies = [{...possibleEnemies[0][0]},{...possibleEnemies[0][0]}];
+var enemies = [];
