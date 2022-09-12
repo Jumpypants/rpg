@@ -34,10 +34,10 @@ var heroes = [{
   health: 70,
   energy: 85,
   image: document.getElementById("hero1"),
-  head: items.head[0],
-  body: items.body[0],
-  hand1: items.hand[0],
-  hand2: items.hand[0],
+  head: null,
+  body: null,
+  hand1: null,
+  hand2: null,
   defending: false
 },{
   name: "Bob",
@@ -75,10 +75,10 @@ var heroes = [{
   health: 70,
   energy: 85,
   image: document.getElementById("hero1"),
-  head: items.head[0],
-  body: items.body[0],
-  hand1: items.hand[0],
-  hand2: items.hand[0],
+  head: null,
+  body: null,
+  hand1: null,
+  hand2: null,
   defending: false
 }];
 

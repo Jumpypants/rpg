@@ -211,30 +211,30 @@ function checkEquipmentClick(cx, cy){
     switch(num){
       case 0:
         if(heroes[game.inventoryCharacter].head != null){
+          changeStats(heroes[game.inventoryCharacter].head, -1);
           roomFloor[game.room].push(heroes[game.inventoryCharacter].head);
           heroes[game.inventoryCharacter].head = null;
-          changeStats(roomFloor[game.room][num], -1);
         }
         break;
       case 1:
         if(heroes[game.inventoryCharacter].hand1 != null){
+          changeStats(heroes[game.inventoryCharacter].hand1, -1);
           roomFloor[game.room].push(heroes[game.inventoryCharacter].hand1);
           heroes[game.inventoryCharacter].hand1 = null;
-          changeStats(roomFloor[game.room][num], -1);
         }
         break;
       case 2:
         if(heroes[game.inventoryCharacter].body != null){
+          changeStats(heroes[game.inventoryCharacter].body, -1);
           roomFloor[game.room].push(heroes[game.inventoryCharacter].body);
           heroes[game.inventoryCharacter].body = null;
-          changeStats(roomFloor[game.room][num], -1);
         }
         break;
       case 3:
         if(heroes[game.inventoryCharacter].hand2 != null){
+          changeStats(heroes[game.inventoryCharacter].hand2, -1);
           roomFloor[game.room].push(heroes[game.inventoryCharacter].hand2);
           heroes[game.inventoryCharacter].hand2 = null;
-          changeStats(roomFloor[game.room][num], -1);
         }
         break;
     }
