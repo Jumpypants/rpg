@@ -8,8 +8,8 @@ var constants = {
   restEnergyRegen: 50,
 
   enemyMin: 1,
-  enemyMax: 4,
+  enemyMax: 3,
   enemyLevel: 0,
 
-  startNumHeroes: 1,
+  startNumHeroes: 2,
 };

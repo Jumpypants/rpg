@@ -43,8 +43,7 @@ function loop(){
   switch(game.state){
     case "room":
       drawHeroes();
-      drawEnemies();
-      checkEnemyCardHover();
+      drawContinueButton();
       break;
     case "inventory":
       drawInventory();
@@ -166,6 +165,15 @@ function checkPlayerHeal(cx, cy){
         }
       }
     }
+  }
+}
+
+function checkContinueButtonClick(cx, cy){
+  if(checkButtonClick(display.continueButtonXOffset, display.continueButtonYOffset, display.continueButtonW, display.continueButtonH, cx, cy)){
+    game.room++;
+    roomFloor[game.room] = [];
+    game.state = "battle";
+    randomizeEnemies();
   }
 }
 
@@ -386,6 +394,7 @@ function onClick(event){
   switch(game.state){
     case "room":
       checkCardInvButton(event.offsetX, event.offsetY);
+      checkContinueButtonClick(event.offsetX, event.offsetY);
       break;
     case "inventory":
       checkInvStatUpgradeButton(event.offsetX, event.offsetY);

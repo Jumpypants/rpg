@@ -2,7 +2,7 @@ function randomizeEnemies(){
   var numEnemies = Math.ceil(Math.random() * (constants.enemyMax - constants.enemyMin + 1));
 
   for(var i = 0; i < numEnemies; i++){
-    enemies.push(possibleEnemies[constants.enemyLevel][Math.floor(Math.random() * possibleEnemies[constants.enemyLevel].length)]);
+    enemies.push({...possibleEnemies[constants.enemyLevel][Math.floor(Math.random() * possibleEnemies[constants.enemyLevel].length)]});
   }
 }
 
@@ -34,7 +34,7 @@ function createHeroes(){
         increase: 1
       },{
         id: "Speed",
-        value: 0,
+        value: 1,
         increase: 1
       },{
         id: "Healing",

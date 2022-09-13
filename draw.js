@@ -271,3 +271,11 @@ function drawActionButtons(hero){
     y + display.battleActionButtonTextYOffset + display.battleActionButtonH * j + display.battleActionButtonTextFontSize);
   }
 }
+
+function drawContinueButton(){
+  ctx.fillStyle = display.continueButtonCol;
+  ctx.fillRect(display.continueButtonXOffset, display.continueButtonYOffset, display.continueButtonW, display.continueButtonH);
+  ctx.fillStyle = display.continueButtonTextCol;
+  ctx.font = "" + display.continueButtonTextFontSize + "px " + display.font;
+  ctx.fillText(display.continueButtonText, display.continueButtonTextXOffset, display.continueButtonTextYOffset);
+}

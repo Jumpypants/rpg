@@ -166,5 +166,17 @@ var display = {
   battleCharacterDefendImageXOffset: 65,
   battleCharacterDefendImageYOffset: 205,
   battleCharacterDefendImageW: 40,
-  battleCharacterDefendImageH: 40
+  battleCharacterDefendImageH: 40,
+
+  //continue button
+  continueButtonCol: "gray",
+  continueButtonXOffset: 410,
+  continueButtonYOffset: 100,
+  continueButtonW: 180,
+  continueButtonH: 50,
+  continueButtonText: "Continue",
+  continueButtonTextCol: "black",
+  continueButtonTextFontSize: 30,
+  continueButtonTextXOffset: 435,
+  continueButtonTextYOffset: 135
 };

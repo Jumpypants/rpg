@@ -5,25 +5,25 @@ var items = {
     image: document.getElementById("bike_helmet"),
     stats: [{
       id: "Max health",
-      value: 100
+      value: 1
     },{
       id: "Max energy",
-      value: 100
+      value: 0
     },{
       id: "Strength",
-      value: 5,
+      value: 0,
     },{
       id: "Dexterity",
-      value: 5
+      value: 0
     },{
       id: "Defence",
-      value: 3
+      value: 1
     },{
       id: "Speed",
-      value: 5
+      value: 0
     },{
       id: "Healing",
-      value: 3
+      value: 0
     }]
   }],
   body: [{
@@ -32,25 +32,25 @@ var items = {
     image: document.getElementById("cardboard_armor"),
     stats: [{
       id: "Max health",
-      value: 100
+      value: 2
     },{
       id: "Max energy",
-      value: 100
+      value: 0
     },{
       id: "Strength",
-      value: 5,
+      value: 0,
     },{
       id: "Dexterity",
-      value: 5
+      value: -1
     },{
       id: "Defence",
-      value: 3
+      value: 1
     },{
       id: "Speed",
-      value: 5
+      value: -1
     },{
       id: "Healing",
-      value: 3
+      value: 0
     }]
   }],
   hand: [{
@@ -59,25 +59,25 @@ var items = {
     image: document.getElementById("crappy_sword"),
     stats: [{
       id: "Max health",
-      value: 100
+      value: 0
     },{
       id: "Max energy",
-      value: 100
+      value: -1
     },{
       id: "Strength",
-      value: 5,
+      value: 1,
     },{
       id: "Dexterity",
-      value: 5
+      value: 0
     },{
       id: "Defence",
-      value: 3
+      value: 0
     },{
       id: "Speed",
-      value: 5
+      value: 0
     },{
       id: "Healing",
-      value: 3
+      value: 0
     }]
   }]
 };

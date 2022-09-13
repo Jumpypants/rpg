@@ -6,30 +6,30 @@ var heroPictures = [document.getElementById("hero1")];
 
 var possibleEnemies = [[{
   name: "Goblin",
-  level: 5,
+  level: 0,
   stats: [{
     id: "Max health",
-    value: 100,
+    value: 7,
   },{
     id: "Max energy",
-    value: 100,
+    value: 0,
   },{
     id: "Strength",
-    value: 5,
+    value: 2,
   },{
     id: "Dexterity",
     value: 5,
   },{
     id: "Defence",
-    value: 3,
+    value: 1,
   },{
     id: "Speed",
-    value: 5,
+    value: 0,
   },{
     id: "Healing",
-    value: 3,
+    value: 0,
   }],
-  health: 70,
+  health: 7,
   image: document.getElementById("image"),
   drops: [items.head[0], items.body[0], items.hand[0]],
   dropNum: 1
