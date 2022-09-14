@@ -62,6 +62,9 @@ function loop(){
 function checkBattleEnd(){
   if(enemies.length == 0){
     game.state = "room";
+    for(var i = 0; i < heroes.length; i++){
+      heroes[i].level++;
+    }
   }
 }
 
