@@ -32,25 +32,26 @@ var possibleEnemies = [[{
   health: 7,
   image: document.getElementById("image"),
   drops: [items.head[0], items.body[0], items.hand[0]],
-  dropNum: 1
+  dropMin: 1,
+  dropMax: 1
 }],[{
-  name: "Boblin",
+  name: "Stone Golem",
   level: 1,
   stats: [{
     id: "Max health",
-    value: 7,
+    value: 15,
   },{
     id: "Max energy",
     value: 0,
   },{
     id: "Strength",
-    value: 2,
+    value: 6,
   },{
     id: "Dexterity",
-    value: 5,
+    value: 0,
   },{
     id: "Defence",
-    value: 1,
+    value: 2,
   },{
     id: "Speed",
     value: 0,
@@ -58,10 +59,11 @@ var possibleEnemies = [[{
     id: "Healing",
     value: 0,
   }],
-  health: 7,
+  health: 15,
   image: document.getElementById("image"),
-  drops: [items.head[0], items.body[0], items.hand[0]],
-  dropNum: 1
+  drops: [items.head[1]],
+  dropMin: 0,
+  dropMax: 1
 }]];
 
 var enemies = [];

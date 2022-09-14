@@ -3,7 +3,7 @@ var constants = {
   defendMultiplyer: 3,
 
   attackEnergyCost: 30,
-  defendEnergyCost: 40,
+  defendEnergyCost: 20,
   healEnergyCost: 50,
   restEnergyRegen: 50,
 

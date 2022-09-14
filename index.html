@@ -1,3 +1,12 @@
+<head>
+  <style>
+    @font-face {
+      font-family: 'KulminoituvaRegular';
+      src: url('http://www.miketaylr.com/f/kulminoituva.ttf');
+    }
+  </style>
+</head>
+<body>
 <img id="image" src="image.jpg"style="display: none">
 <img id="hero1" src="images/hero1.png"style="display: none">
 <img id="crappy_sword" src="images/crappy_sword.png"style="display: none">
@@ -6,8 +15,8 @@
 <img id="defend" src="images/defend.png"style="display: none">
 <img id="card" src="images/card.png"style="display: none">
 
-<canvas id="gc" width="1000"  height="600" />
 
+<canvas id="gc" width="1000"  height="600" />
 <script src="items.js" type="text/javascript"></script>
 <script src="constants.js" type="text/javascript"></script>
 <script src="display.js" type="text/javascript"></script>
@@ -15,7 +24,6 @@
 <script src="draw.js" type="text/javascript"></script>
 <script src="create.js" type="text/javascript"></script>
 <script type="text/javascript">
-
 var fps = 60;
 
 var game = {
@@ -65,9 +73,13 @@ function checkBattleEnd(){
 }
 
 function enemyDropItems(enemy){
-  for(var i = 0; i < enemies[enemy].dropNum; i++){
-    var num = Math.floor(Math.random() * enemies[enemy].drops.length);
-    roomFloor[game.room].push(enemies[enemy].drops[num]);
+  var numDrops = randomBetween(enemies[enemy].dropMin, enemies[enemy].dropMax);
+
+  if(numDrops > 0){
+    for(var i = 0; i < numDrops; i++){
+      var num = Math.floor(Math.random() * enemies[enemy].drops.length);
+      roomFloor[game.room].push(enemies[enemy].drops[num]);
+    }
   }
 }
 
@@ -422,3 +434,4 @@ window.onload = function() {
     setInterval(loop, 1000 / fps);
   }
 </script>
+</body>

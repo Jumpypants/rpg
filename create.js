@@ -1,5 +1,10 @@
+
+function randomBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function randomizeEnemies(){
-  var numEnemies = Math.ceil(Math.random() * (constants.enemyMax - constants.enemyMin + 1));
+  var numEnemies = randomBetween(constants.enemyMin, constants.enemyMax);
   var level = Math.floor(game.room / constants.enemyRoomsPerlevel);
   if(level > possibleEnemies.length - 1){
     level = possibleEnemies.length - 1;

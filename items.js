@@ -25,6 +25,32 @@ var items = {
       id: "Healing",
       value: 0
     }]
+  },{
+    id: "Stone Mask",
+    type: "head",
+    image: document.getElementById("bike_helmet"),
+    stats: [{
+      id: "Max health",
+      value: -3
+    },{
+      id: "Max energy",
+      value: -2
+    },{
+      id: "Strength",
+      value: 0,
+    },{
+      id: "Dexterity",
+      value: 7
+    },{
+      id: "Defence",
+      value: 2
+    },{
+      id: "Speed",
+      value: 2
+    },{
+      id: "Healing",
+      value: -1
+    }]
   }],
   body: [{
     id: "Cardboard Armor",

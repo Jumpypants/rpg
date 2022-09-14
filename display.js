@@ -15,13 +15,13 @@ var display = {
 
   cardNameCol: "black",
   cardNameFontSize: 20,
-  cardNameXOffset: 50,
-  cardNameYOffset: 25,
+  cardNameXOffset: 20,
+  cardNameYOffset: 35,
 
   cardLevelCol: "black",
   cardLevelFontSize: 20,
   cardLevelXOffset: 45,
-  cardLevelYOffset: 50,
+  cardLevelYOffset: 55,
 
   cardImageXOffset: 20,
   cardImageYOffset: 65,
@@ -151,7 +151,7 @@ var display = {
   battleActionButtonTextFontSize: 20,
   battleActionButtonTextXOffset: 10,
   battleActionButtonTextYOffset: 5,
-  battleActionButtonText: ["Attack: -30", "Defend: -40", "Heal: -50", "Rest: +50"],
+  battleActionButtonText: ["Attack: -30", "Defend: -20", "Heal: -50", "Rest: +50"],
 
   battleChooseCharacterBorderW: "10",
   battleChooseCharacterBorderCol: "red",
