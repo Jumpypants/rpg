@@ -1,8 +1,11 @@
 function randomizeEnemies(){
   var numEnemies = Math.ceil(Math.random() * (constants.enemyMax - constants.enemyMin + 1));
-
+  var level = Math.floor(game.room / constants.enemyRoomsPerlevel);
+  if(level > possibleEnemies.length - 1){
+    level = possibleEnemies.length - 1;
+  }
   for(var i = 0; i < numEnemies; i++){
-    enemies.push({...possibleEnemies[constants.enemyLevel][Math.floor(Math.random() * possibleEnemies[constants.enemyLevel].length)]});
+    enemies.push({...possibleEnemies[level][Math.floor(Math.random() * possibleEnemies[level].length)]});
   }
 }
 

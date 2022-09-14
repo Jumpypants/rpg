@@ -9,6 +9,7 @@ var constants = {
 
   enemyMin: 1,
   enemyMax: 3,
+  enemyRoomsPerlevel: 3,
   enemyLevel: 0,
 
   startNumHeroes: 2,
