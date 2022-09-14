@@ -170,6 +170,7 @@ function checkPlayerHeal(cx, cy){
 function checkContinueButtonClick(cx, cy){
   if(checkButtonClick(display.continueButtonXOffset, display.continueButtonYOffset, display.continueButtonW, display.continueButtonH, cx, cy)){
     game.room++;
+    game.turn = 0;
     roomFloor[game.room] = [];
     game.state = "battle";
     randomizeEnemies();
