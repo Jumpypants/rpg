@@ -28,7 +28,7 @@ var items = {
   },{
     id: "Stone Mask",
     type: "head",
-    image: document.getElementById("bike_helmet"),
+    image: document.getElementById("image"),
     stats: [{
       id: "Max health",
       value: -3
@@ -71,6 +71,32 @@ var items = {
     },{
       id: "Defence",
       value: 1
+    },{
+      id: "Speed",
+      value: -1
+    },{
+      id: "Healing",
+      value: 0
+    }]
+  },{
+    id: "Apprentice Robe",
+    type: "body",
+    image: document.getElementById("image"),
+    stats: [{
+      id: "Max health",
+      value: 1
+    },{
+      id: "Max energy",
+      value: 5
+    },{
+      id: "Strength",
+      value: -1,
+    },{
+      id: "Dexterity",
+      value: 1
+    },{
+      id: "Defence",
+      value: -1
     },{
       id: "Speed",
       value: -1

@@ -1,5 +1,5 @@
 
-function randomBetween(min, max) {
+function randomBetween(min, max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -23,7 +23,7 @@ function createHeroes(){
       stats: [{
         id: "Max health",
         value: 20,
-        increase: 5
+        increase: 3
       },{
         id: "Max energy",
         value: 50,
