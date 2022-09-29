@@ -28,7 +28,7 @@ var items = {
   },{
     id: "Stone Mask",
     type: "head",
-    image: document.getElementById("image"),
+    image: document.getElementById("stone_mask"),
     stats: [{
       id: "Max health",
       value: -3

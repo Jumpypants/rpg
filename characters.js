@@ -6,6 +6,7 @@ var heroPictures = [document.getElementById("hero1"), document.getElementById("h
 
 var possibleEnemies = [[{
   name: "Goblin",
+  nameLine2: null,
   level: 0,
   stats: [{
     id: "Max health",
@@ -30,12 +31,13 @@ var possibleEnemies = [[{
     value: 0,
   }],
   health: 7,
-  image: document.getElementById("image"),
+  image: document.getElementById("goblin"),
   drops: [items.head[0], items.body[0], items.hand[0]],
   dropMin: 1,
   dropMax: 1
 }],[{
   name: "Stone Golem",
+  nameLine2: null,
   level: 1,
   stats: [{
     id: "Max health",
@@ -59,13 +61,14 @@ var possibleEnemies = [[{
     id: "Healing",
     value: 0,
   }],
-  health: 15,
-  image: document.getElementById("image"),
+  health: 12,
+  image: document.getElementById("stone_golem"),
   drops: [items.head[1]],
   dropMin: 0,
   dropMax: 1
 },{
-  name: "Apprentice",
+  name: "Sorcerer",
+  nameLine2: "Apprentice",
   level: 1,
   stats: [{
     id: "Max health",

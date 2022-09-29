@@ -15,7 +15,7 @@ var display = {
 
   cardNameCol: "black",
   cardNameFontSize: 20,
-  cardNameXOffset: 20,
+  cardNameXOffset: 30,
   cardNameYOffset: 35,
 
   cardLevelCol: "black",
@@ -27,6 +27,9 @@ var display = {
   cardImageYOffset: 65,
   cardImageW: 130,
   cardImageH: 80,
+
+  cardImageBorderW: 2,
+  cardImageBoderCol: "black",
 
   cardHealthCol: "black",
   cardHealthFontSize: 20,
@@ -70,10 +73,10 @@ var display = {
   invLevelXOffset: 260,
   invLevelYOffset: 175,
 
-  invPlayerImageXOffset: 50,
-  invPlayerImageYOffset: 360,
-  invPlayerImageW: 195,
-  invPlayerImageH: 120,
+  invPlayerImageXOffset: 0,
+  invPlayerImageYOffset: 300,
+  invPlayerImageW: 260,
+  invPlayerImageH: 160,
 
   invFloorBoxCol: "gray",
   invFloorGridXOffset: 550,
@@ -167,6 +170,14 @@ var display = {
   battleCharacterDefendImageYOffset: 205,
   battleCharacterDefendImageW: 40,
   battleCharacterDefendImageH: 40,
+
+  battleDodgeCol: "Black",
+  battleDodgeFontSize: 100,
+  battleDodgeXOffset: 0,
+  battleDodgeYOffset: 100,
+  battleDodgeText: "Dodge",
+  battleDodgeShrink: 2,
+  battleDodgeMoveSpeed: 2,
 
   //continue button
   continueButtonCol: "gray",

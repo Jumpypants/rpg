@@ -42,6 +42,11 @@ function drawHeroes(){
     ctx.fillText("Level: " + heroes[i].level, x + display.cardLevelXOffset, y + display.cardLevelYOffset);
     //image
     ctx.drawImage(heroes[i].image, x + display.cardImageXOffset, y + display.cardImageYOffset, display.cardImageW, display.cardImageH);
+    ctx.lineWidth = display.cardImageBorderW;
+    ctx.strokeStyle = display.cardImageBoderCol;
+    ctx.beginPath();
+    ctx.rect(x + display.cardImageXOffset, y + display.cardImageYOffset, display.cardImageW, display.cardImageH);
+    ctx.stroke();
     //health
     ctx.fillStyle = display.cardHealthCol;
     ctx.font = "" + display.cardHealthFontSize + "px " + display.font;
@@ -96,15 +101,27 @@ function drawEnemies(){
       ctx.stroke();
     }
     //name
-    ctx.fillStyle = display.cardNameCol;
-    ctx.font = "" + display.cardNameFontSize + "px " + display.font;
-    ctx.fillText(enemies[i].name, x + display.cardNameXOffset, y + display.cardNameYOffset);
+    if(enemies[i].nameLine2 == null){
+      ctx.fillStyle = display.cardNameCol;
+      ctx.font = "" + display.cardNameFontSize + "px " + display.font;
+      ctx.fillText(enemies[i].name, x + display.cardNameXOffset, y + display.cardNameYOffset);
+    } else {
+      ctx.fillStyle = display.cardNameCol;
+      ctx.font = "" + display.cardNameFontSize + "px " + display.font;
+      ctx.fillText(enemies[i].name, x + display.cardNameXOffset, y + display.cardNameYOffset / 2);
+      ctx.fillText(enemies[i].nameLine2, x + display.cardNameXOffset, y + display.cardNameYOffset);
+    }
     //level
     ctx.fillStyle = display.cardLevelCol;
     ctx.font = "" + display.cardLevelFontSize + "px " + display.font;
     ctx.fillText("Level: " + enemies[i].level, x + display.cardLevelXOffset, y + display.cardLevelYOffset);
     //image
     ctx.drawImage(enemies[i].image, x + display.cardImageXOffset, y + display.cardImageYOffset, display.cardImageW, display.cardImageH);
+    ctx.lineWidth = display.cardImageBorderW;
+    ctx.strokeStyle = display.cardImageBoderCol;
+    ctx.beginPath();
+    ctx.rect(x + display.cardImageXOffset, y + display.cardImageYOffset, display.cardImageW, display.cardImageH);
+    ctx.stroke();
     //health
     ctx.fillStyle = display.cardHealthCol;
     ctx.font = "" + display.cardHealthFontSize + "px " + display.font;
@@ -278,4 +295,12 @@ function drawContinueButton(){
   ctx.fillStyle = display.continueButtonTextCol;
   ctx.font = "" + display.continueButtonTextFontSize + "px " + display.font;
   ctx.fillText(display.continueButtonText, display.continueButtonTextXOffset, display.continueButtonTextYOffset);
+}
+
+function drawDodge(){
+  for(var i = 0; i < dodge.length; i++){
+    ctx.fillStyle = display.battleDodgeCol;
+    ctx.font = "" + dodge[i].size + "px " + display.font;
+    ctx.fillText(display.battleDodgeText, dodge[i].x, dodge[i].y +  dodge[i].size);
+  }
 }
