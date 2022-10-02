@@ -1,6 +1,6 @@
 var heroes = [];
 
-var names = ["Bob", "Joe"];
+var names = ["Bob", "Joe", "Jeff", "Tom"];
 
 var heroPictures = [document.getElementById("hero1"), document.getElementById("hero2")];
 
@@ -67,8 +67,8 @@ var possibleEnemies = [[{
   dropMin: 0,
   dropMax: 1
 },{
-  name: "Sorcerer",
-  nameLine2: "Apprentice",
+  name: "Apprentice",
+  nameLine2: "Sorcerer",
   level: 1,
   stats: [{
     id: "Max health",
@@ -93,7 +93,7 @@ var possibleEnemies = [[{
     value: 0,
   }],
   health: 10,
-  image: document.getElementById("image"),
+  image: document.getElementById("apprentice"),
   drops: [items.body[1]],
   dropMin: 0,
   dropMax: 1

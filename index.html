@@ -12,6 +12,7 @@
 <img id="hero2" src="images/hero2.png"style="display: none">
 <img id="goblin" src="images/goblin.png"style="display: none">
 <img id="stone_golem" src="images/stone_golem.png"style="display: none">
+<img id="apprentice" src="images/apprentice.png"style="display: none">
 <img id="crappy_sword" src="images/crappy_sword.png"style="display: none">
 <img id="bike_helmet" src="images/bike_helmet.png"style="display: none">
 <img id="cardboard_armor" src="images/cardboard_armor.png"style="display: none">
@@ -162,8 +163,10 @@ function attack(a, d, dn, dt){
   if(d.defending){
     defense *= constants.defendMultiplyer;
   }
-  if(dodgeChance > d.stats[3].value && defense < a.stats[2].value){
-    d.health -= (a.stats[2].value - defense);
+  if(dodgeChance > d.stats[3].value){
+    if(defense < a.stats[2].value){
+      d.health -= (a.stats[2].value - defense);
+    }
   } else if(dt == "hero"){
     dodge.push({
       size: display.battleDodgeFontSize,
@@ -176,7 +179,6 @@ function attack(a, d, dn, dt){
       x: display.heroXOffset + display.heroSpacing * dn + display.cardW * dn + display.battleDodgeXOffset,
       y: display.heroYOffset + display.battleDodgeYOffset
     });
-    console.log(dodge);
   }
   checkDeath();
 }
@@ -405,7 +407,7 @@ function checkInvStatUpgradeButton(cx, cy){
     for(var i = 0; i < heroes[game.inventoryCharacter].stats.length; i++){
       if(checkButtonClick(display.invStatUpgradeXOffset,
       display.invStatUpgradeYOffset + display.invStatUpgradeSpacing * i + display.invStatUpgradeH * i,
-      display.invStatUpgradeW, display.invStatUpgradeH, cx, cy)){
+      display.invStatUpgradeW, display.invStatUpgradeH, cx, cy) && heroes[game.inventoryCharacter].stats[i].value < heroes[game.inventoryCharacter].stats[i].max){
         heroes[game.inventoryCharacter].stats[i].value += heroes[game.inventoryCharacter].stats[i].increase;
         heroes[game.inventoryCharacter].levelsUsed++;
       }

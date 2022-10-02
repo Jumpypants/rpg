@@ -23,31 +23,38 @@ function createHeroes(){
       stats: [{
         id: "Max health",
         value: 20,
-        increase: 3
+        increase: 3,
+        max: 1000
       },{
         id: "Max energy",
         value: 50,
-        increase: 5
+        increase: 5,
+        max: 1000
       },{
         id: "Strength",
         value: 5,
-        increase: 1
+        increase: 1,
+        max: 1000
       },{
         id: "Dexterity",
         value: 0,
-        increase: 2
+        increase: 2,
+        max: 60
       },{
         id: "Defence",
         value: 1,
-        increase: 1
+        increase: 1,
+        max: 1000
       },{
         id: "Speed",
         value: 1,
-        increase: 1
+        increase: 1,
+        max: 1000
       },{
         id: "Healing",
         value: 5,
-        increase: 5
+        increase: 5,
+        max: 1000
       }],
       health: 20,
       energy: 50,

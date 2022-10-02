@@ -170,7 +170,8 @@ function drawInventory(){
   }
   //stat upgrade buttons
   for(var i = 0; i < heroes[game.inventoryCharacter].stats.length; i++){
-    if(heroes[game.inventoryCharacter].levelsUsed < heroes[game.inventoryCharacter].level){
+    if(heroes[game.inventoryCharacter].levelsUsed < heroes[game.inventoryCharacter].level
+      && heroes[game.inventoryCharacter].stats[i].value < heroes[game.inventoryCharacter].stats[i].max){
       ctx.fillStyle = display.invStatUpgradeCol;
       ctx.fillRect(display.invStatUpgradeXOffset,
       display.invStatUpgradeYOffset + display.invStatUpgradeSpacing * i + display.invStatUpgradeH * i,
