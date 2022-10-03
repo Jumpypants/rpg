@@ -200,7 +200,7 @@ var display = {
   scoreFontSize: 30,
   scoreText: "Score: ",
 
-  levelCol: "black",
+  levelCol: "red",
   levelXOffset: 800,
   levelYOffset: 150,
   levelFontSize: 30,
