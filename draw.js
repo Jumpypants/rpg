@@ -1,6 +1,14 @@
 function drawBg(){
-  ctx.fillStyle = "AliceBlue";
-  ctx.fillRect(0, 0, display.cw, display.ch);
+  if(possibleEnemies.length * constants.enemyRoomsPerlevel < game.room){
+    var image = possibleEnemies.length * constants.enemyRoomsPerlevel;
+  } else {
+    var image = display.backgrounds[Math.floor(game.room / constants.enemyRoomsPerlevel)];
+  }
+  ctx.drawImage(image, 0, 0, display.cw, display.ch);
+}
+
+function drawGameOver(){
+  
 }
 
 function drawHeroes(){

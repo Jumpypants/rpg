@@ -4,6 +4,8 @@ var display = {
   cw: 1000,
   ch: 600,
 
+  //bg
+  backgrounds: [document.getElementById("bg0")],
   //cards
   cardImage: document.getElementById("card"),
   cardW: 170,

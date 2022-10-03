@@ -81,7 +81,7 @@ var items = {
   },{
     id: "Apprentice Robe",
     type: "body",
-    image: document.getElementById("image"),
+    image: document.getElementById("apprentice_robe"),
     stats: [{
       id: "Max health",
       value: 1
@@ -134,7 +134,7 @@ var items = {
   },{
     id: "Apprentice Wand",
     type: "hand",
-    image: document.getElementById("image"),
+    image: document.getElementById("apprentice_wand"),
     stats: [{
       id: "Max health",
       value: -1
