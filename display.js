@@ -154,7 +154,7 @@ var display = {
   battleActionButtonTextFontSize: 20,
   battleActionButtonTextXOffset: 10,
   battleActionButtonTextYOffset: 5,
-  battleActionButtonText: ["Attack: -30", "Defend: -20", "Heal: -50", "Rest: +50"],
+  battleActionButtonText: ["Attack: -30", "Defend: -20", "Heal: -50", "Rest"],
 
   battleChooseCharacterBorderW: "10",
   battleChooseCharacterBorderCol: "red",
@@ -171,7 +171,7 @@ var display = {
   battleCharacterDefendImageW: 40,
   battleCharacterDefendImageH: 40,
 
-  battleDodgeCol: "Black",
+  battleDodgeCol: "Red",
   battleDodgeFontSize: 100,
   battleDodgeXOffset: 0,
   battleDodgeYOffset: 100,
@@ -189,5 +189,18 @@ var display = {
   continueButtonTextCol: "black",
   continueButtonTextFontSize: 30,
   continueButtonTextXOffset: 435,
-  continueButtonTextYOffset: 135
+  continueButtonTextYOffset: 135,
+
+  //score
+  scoreCol: "black",
+  scoreXOffset: 800,
+  scoreYOffset: 100,
+  scoreFontSize: 30,
+  scoreText: "Score: ",
+
+  levelCol: "black",
+  levelXOffset: 800,
+  levelYOffset: 150,
+  levelFontSize: 30,
+  levelText: "Level: "
 };

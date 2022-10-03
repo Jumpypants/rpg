@@ -131,5 +131,31 @@ var items = {
       id: "Healing",
       value: 0
     }]
+  },{
+    id: "Apprentice Wand",
+    type: "hand",
+    image: document.getElementById("image"),
+    stats: [{
+      id: "Max health",
+      value: -1
+    },{
+      id: "Max energy",
+      value: 1
+    },{
+      id: "Strength",
+      value: 0,
+    },{
+      id: "Dexterity",
+      value: 0
+    },{
+      id: "Defence",
+      value: 1
+    },{
+      id: "Speed",
+      value: 0
+    },{
+      id: "Healing",
+      value: 1
+    }]
   }]
 };

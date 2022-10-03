@@ -19,7 +19,7 @@ var possibleEnemies = [[{
     value: 2,
   },{
     id: "Dexterity",
-    value: 5,
+    value: 10,
   },{
     id: "Defence",
     value: 1,
@@ -94,8 +94,8 @@ var possibleEnemies = [[{
   }],
   health: 10,
   image: document.getElementById("apprentice"),
-  drops: [items.body[1]],
-  dropMin: 0,
+  drops: [items.body[1], items.hand[1]],
+  dropMin: 1,
   dropMax: 1
 }]];
 

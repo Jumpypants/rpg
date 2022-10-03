@@ -101,13 +101,11 @@ function drawEnemies(){
       ctx.stroke();
     }
     //name
+    ctx.fillStyle = display.cardNameCol;
+    ctx.font = "" + display.cardNameFontSize + "px " + display.font;
     if(enemies[i].nameLine2 == null){
-      ctx.fillStyle = display.cardNameCol;
-      ctx.font = "" + display.cardNameFontSize + "px " + display.font;
       ctx.fillText(enemies[i].name, x + display.cardNameXOffset, y + display.cardNameYOffset);
     } else {
-      ctx.fillStyle = display.cardNameCol;
-      ctx.font = "" + display.cardNameFontSize + "px " + display.font;
       ctx.fillText(enemies[i].name, x + display.cardNameXOffset, y + display.cardNameYOffset / 2);
       ctx.fillText(enemies[i].nameLine2, x + display.cardNameXOffset, y + display.cardNameYOffset);
     }
@@ -304,4 +302,14 @@ function drawDodge(){
     ctx.font = "" + dodge[i].size + "px " + display.font;
     ctx.fillText(display.battleDodgeText, dodge[i].x, dodge[i].y +  dodge[i].size);
   }
+}
+
+function drawScore(){
+  ctx.fillStyle = display.scoreCol;
+  ctx.font = "" + display.scoreFontSize + "px " + display.font;
+  ctx.fillText(display.scoreText + game.room, display.scoreXOffset, display.scoreYOffset);
+
+  ctx.fillStyle = display.levelCol;
+  ctx.font = "" + display.levelFontSize + "px " + display.font;
+  ctx.fillText(display.levelText + Math.floor(game.room / constants.enemyRoomsPerlevel), display.levelXOffset, display.levelYOffset);
 }

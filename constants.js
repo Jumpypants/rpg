@@ -5,7 +5,6 @@ var constants = {
   attackEnergyCost: 30,
   defendEnergyCost: 20,
   healEnergyCost: 50,
-  restEnergyRegen: 50,
 
   enemyMin: 1,
   enemyMax: 3,

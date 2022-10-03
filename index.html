@@ -66,6 +66,7 @@ function loop(){
     case "battle":
       drawHeroes();
       drawEnemies();
+      drawScore();
       drawDodge();
       turn();
       updateDodge();
@@ -192,6 +193,7 @@ function checkPlayerAttack(cx, cy){
         game.selectedAction = null;
         heroes[game.playerTurn].energy -= constants.attackEnergyCost;
         game.turn++;
+        heroes[game.playerTurn].defending = false;
         attack(heroes[game.playerTurn], enemies[i], i, "enemy");
       }
     }
@@ -208,6 +210,7 @@ function checkPlayerHeal(cx, cy){
           for(var j = 0; heroes[i].health < heroes[i].stats[0].value && j < heroes[game.playerTurn].stats[6].value; j++){
             heroes[i].health++;
           }
+          heroes[game.playerTurn].defending = false;
           game.selectedAction = null;
           heroes[game.playerTurn].energy -= constants.healEnergyCost;
           game.turn++;
@@ -234,7 +237,6 @@ function checkActionButtonClick(cx, cy){
     if(checkButtonClick(x, y + display.battleActionButtonH * i, display.cardW, display.battleActionButtonH, cx, cy)){
       if(i == 0 && heroes[game.playerTurn].energy >= constants.attackEnergyCost){
         game.selectedAction = "attack";
-        heroes[game.playerTurn].defending = false;
       } else
       if(i == 1 && heroes[game.playerTurn].energy >= constants.defendEnergyCost){
         heroes[game.playerTurn].energy -= constants.defendEnergyCost;
@@ -244,10 +246,9 @@ function checkActionButtonClick(cx, cy){
       } else
       if(i == 2 && heroes[game.playerTurn].energy >= constants.healEnergyCost){
         game.selectedAction = "heal";
-        heroes[game.playerTurn].defending = false;
       } else
       if(i == 3){
-        for(var j = 0; j < constants.restEnergyRegen && heroes[game.playerTurn].energy < heroes[game.playerTurn].stats[1].value; j++){
+        for(var j = 0; heroes[game.playerTurn].energy < heroes[game.playerTurn].stats[1].value; j++){
           heroes[game.playerTurn].energy++;
         }
         game.selectedAction = null;
@@ -316,7 +317,11 @@ function checkEnemyCardHover(){
     display.cardH,
     game.mouseX,
     game.mouseY)){
-      drawDropDown(enemies[i].stats, enemies[i].name + " " + enemies[i].nameLine2);
+      if(enemies[i].nameLine2 == null){
+        drawDropDown(enemies[i].stats, enemies[i].name);
+      } else {
+        drawDropDown(enemies[i].stats, enemies[i].name + " " + enemies[i].nameLine2);
+      }
     }
   }
 }
