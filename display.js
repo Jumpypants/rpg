@@ -194,7 +194,7 @@ var display = {
   continueButtonTextYOffset: 135,
 
   //score
-  scoreCol: "black",
+  scoreCol: "red",
   scoreXOffset: 800,
   scoreYOffset: 100,
   scoreFontSize: 30,
