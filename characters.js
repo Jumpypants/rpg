@@ -97,6 +97,68 @@ var possibleEnemies = [[{
   drops: [items.body[1], items.hand[1]],
   dropMin: 1,
   dropMax: 1
+}],[{
+  name: "Apprentice",
+  nameLine2: "Sorcerer",
+  level: 1,
+  stats: [{
+    id: "Max health",
+    value: 10,
+  },{
+    id: "Max energy",
+    value: 0,
+  },{
+    id: "Strength",
+    value: 6,
+  },{
+    id: "Dexterity",
+    value: 10,
+  },{
+    id: "Defence",
+    value: 2,
+  },{
+    id: "Speed",
+    value: 5,
+  },{
+    id: "Healing",
+    value: 0,
+  }],
+  health: 10,
+  image: document.getElementById("apprentice"),
+  drops: [items.body[1], items.hand[1]],
+  dropMin: 1,
+  dropMax: 1
+},{
+  name: "Sorcerer",
+  nameLine2: null,
+  level: 2,
+  stats: [{
+    id: "Max health",
+    value: 15,
+  },{
+    id: "Max energy",
+    value: 0,
+  },{
+    id: "Strength",
+    value: 7,
+  },{
+    id: "Dexterity",
+    value: 20,
+  },{
+    id: "Defence",
+    value: 2,
+  },{
+    id: "Speed",
+    value: 3,
+  },{
+    id: "Healing",
+    value: 0,
+  }],
+  health: 15,
+  image: document.getElementById("image"),
+  drops: [items.head[2]],
+  dropMin: 0,
+  dropMax: 1
 }]];
 
 var enemies = [];

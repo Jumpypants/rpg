@@ -1,8 +1,8 @@
 function drawBg(){
-  if(possibleEnemies.length * constants.enemyRoomsPerlevel < game.room){
-    var image = possibleEnemies.length * constants.enemyRoomsPerlevel;
+  if(game.room > possibleEnemies.length * constants.enemyRoomsPerlevel){
+    var image = display.backgrounds[possibleEnemies.length * constants.enemyRoomsPerlevel];
   } else {
-    var image = display.backgrounds[Math.floor(game.room / constants.enemyRoomsPerlevel)];
+    var image = display.backgrounds[display.backgrounds.length -1];
   }
   ctx.drawImage(image, 0, 0, display.cw, display.ch);
 }

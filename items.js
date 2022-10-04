@@ -51,6 +51,32 @@ var items = {
       id: "Healing",
       value: -1
     }]
+  },{
+    id: "Sorcerer Hat",
+    type: "head",
+    image: document.getElementById("image"),
+    stats: [{
+      id: "Max health",
+      value: 1
+    },{
+      id: "Max energy",
+      value: 1
+    },{
+      id: "Strength",
+      value: 1,
+    },{
+      id: "Dexterity",
+      value: 1
+    },{
+      id: "Defence",
+      value: -1
+    },{
+      id: "Speed",
+      value: 1
+    },{
+      id: "Healing",
+      value: 1
+    }]
   }],
   body: [{
     id: "Cardboard Armor",
