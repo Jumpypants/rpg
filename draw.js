@@ -8,7 +8,7 @@ function drawBg(){
 }
 
 function drawGameOver(){
-  
+
 }
 
 function drawHeroes(){
@@ -138,6 +138,9 @@ function drawEnemies(){
 }
 
 function drawInventory(){
+  //bg
+  ctx.fillStyle = display.invBgCol;
+  ctx.fillRect(display.invBgXOffset, display.invBgYOffset, display.invBgW, display.invBgH);
   //equipment slots
   drawGrid(display.invEquipmentGridXOffset,
   display.invEquipmentGridYOffset,

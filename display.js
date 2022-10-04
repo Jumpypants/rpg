@@ -6,6 +6,7 @@ var display = {
 
   //bg
   backgrounds: [document.getElementById("bg0")],
+
   //cards
   cardImage: document.getElementById("card"),
   cardW: 170,
@@ -55,6 +56,12 @@ var display = {
   cardInvButtonTextYOffset: 230,
 
   //inventory
+  invBgCol: "white",
+  invBgXOffset: 10,
+  invBgYOffset: 10,
+  invBgW: 980,
+  invBgH: 580,
+
   invBoxW: 70,
   invBoxH: 70,
   invBoxSpacing: 20,
