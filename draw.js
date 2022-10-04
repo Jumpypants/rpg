@@ -39,7 +39,7 @@ function drawHeroes(){
         ctx.lineWidth = display.battleCharacterHealBorderW;
         ctx.strokeStyle = display.battleCharacterHealBorderCol;
         ctx.beginPath();
-        ctx.rect(display.heroXOffset + display.heroSpacing * i + display.cardW * i, y, display.battleCardBorderW, display.cardH);
+        ctx.rect(display.heroXOffset + display.heroSpacing * i + display.cardW * i, y, display.battleCardBorderW, display.battleCardBorderH);
         ctx.stroke();
       }
     }
