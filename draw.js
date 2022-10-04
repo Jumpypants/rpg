@@ -22,21 +22,24 @@ function drawHeroes(){
         ctx.lineWidth = display.battleChooseCharacterBorderW;
         ctx.strokeStyle = display.battleChooseCharacterBorderCol;
         ctx.beginPath();
-        ctx.rect(display.heroXOffset + display.heroSpacing * i + display.cardW * i, y, display.cardW, display.cardH);
+        ctx.rect(display.heroXOffset + display.heroSpacing * i + display.cardW * i, y, display.battleCardBorderW, display.battleCardBorderH);
         ctx.stroke();
       }
       if(game.turnCharacterType == "hero"){
         ctx.lineWidth = display.battleCharacterTurnBorderW;
         ctx.strokeStyle = display.battleCharacterTurnBorderCol;
         ctx.beginPath();
-        ctx.rect(display.heroXOffset + display.heroSpacing * game.playerTurn + display.cardW * game.playerTurn, y, display.cardW, display.cardH);
+        ctx.rect(display.heroXOffset + display.heroSpacing * game.playerTurn + display.cardW * game.playerTurn,
+          y,
+          display.battleCardBorderW,
+          display.battleCardBorderH);
         ctx.stroke();
       }
       if(game.turnCharacterType == "hero" && heroes[i] != heroes[game.playerTurn] && game.selectedAction == "heal"){
         ctx.lineWidth = display.battleCharacterHealBorderW;
         ctx.strokeStyle = display.battleCharacterHealBorderCol;
         ctx.beginPath();
-        ctx.rect(display.heroXOffset + display.heroSpacing * i + display.cardW * i, y, display.cardW, display.cardH);
+        ctx.rect(display.heroXOffset + display.heroSpacing * i + display.cardW * i, y, display.battleCardBorderW, display.cardH);
         ctx.stroke();
       }
     }
@@ -98,14 +101,17 @@ function drawEnemies(){
       ctx.lineWidth = display.battleChooseCharacterBorderW;
       ctx.strokeStyle = display.battleChooseCharacterBorderCol;
       ctx.beginPath();
-      ctx.rect(x, y, display.cardW, display.cardH);
+      ctx.rect(x, y, display.battleCardBorderW, display.battleCardBorderH);
       ctx.stroke();
     }
     if(game.turnCharacterType == "enemy"){
       ctx.lineWidth = display.battleCharacterTurnBorderW;
       ctx.strokeStyle = display.battleCharacterTurnBorderCol;
       ctx.beginPath();
-      ctx.rect(display.heroXOffset + display.heroSpacing * game.enemyTurn + display.cardW * game.enemyTurn, y, display.cardW, display.cardH);
+      ctx.rect(display.heroXOffset + display.heroSpacing * game.enemyTurn + display.cardW * game.enemyTurn,
+      y,
+      display.battleCardBorderW,
+      display.battleCardBorderH);
       ctx.stroke();
     }
     //name
@@ -290,7 +296,7 @@ function drawActionButtons(hero){
   var y = display.ch - display.heroYOffset - display.cardH + display.battleActionButtonYOffset;
   for(var j = 0; j < display.battleActionButtonText.length; j++){
     ctx.fillStyle = display.battleActionButtonCol;
-    ctx.fillRect(x, y + display.battleActionButtonH * j, display.cardW, display.battleActionButtonH);
+    ctx.fillRect(x, y + display.battleActionButtonH * j, display.battleActionButtonW, display.battleActionButtonH);
     ctx.fillStyle = display.battleActionButtonTextCol;
     ctx.font = "" + display.battleActionButtonTextFontSize + "px " + display.font;
     ctx.fillText(display.battleActionButtonText[j],

@@ -9,8 +9,8 @@ var display = {
 
   //cards
   cardImage: document.getElementById("card"),
-  cardW: 170,
-  cardH: 250,
+  cardW: 180,
+  cardH: 265,
 
   heroXOffset: 30,
   heroYOffset: 30,
@@ -157,6 +157,7 @@ var display = {
 
   //battle
   battleActionButtonCol: "Bisque",
+  battleActionButtonW: 170,
   battleActionButtonH: 30,
   battleActionButtonYOffset: 30,
   battleActionButtonTextCol: "black",
@@ -164,6 +165,9 @@ var display = {
   battleActionButtonTextXOffset: 10,
   battleActionButtonTextYOffset: 5,
   battleActionButtonText: ["Attack: -30", "Defend: -20", "Heal: -50", "Rest"],
+
+  battleCardBorderW: 170,
+  battleCardBorderH: 250,
 
   battleChooseCharacterBorderW: "10",
   battleChooseCharacterBorderCol: "red",
