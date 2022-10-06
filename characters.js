@@ -155,7 +155,7 @@ var possibleEnemies = [[{
     value: 0,
   }],
   health: 15,
-  image: document.getElementById("image"),
+  image: document.getElementById("sorcerer"),
   drops: [items.head[2]],
   dropMin: 0,
   dropMax: 1
