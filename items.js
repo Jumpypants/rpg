@@ -54,7 +54,7 @@ var items = {
   },{
     id: "Sorcerer Hat",
     type: "head",
-    image: document.getElementById("image"),
+    image: document.getElementById("sorcerer_hat"),
     stats: [{
       id: "Max health",
       value: 1
