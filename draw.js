@@ -95,7 +95,7 @@ function drawEnemies(){
     var x = display.heroXOffset + display.heroSpacing * i + display.cardW * i;
     var y = display.heroYOffset;
     //cards
-    ctx.drawImage(display.cardImage, x, y, display.cardW, display.cardH);
+    ctx.drawImage(display.enemyCardImage, x, y, display.cardW, display.cardH);
 
     if(game.selectedAction == "attack"){
       ctx.lineWidth = display.battleChooseCharacterBorderW;
