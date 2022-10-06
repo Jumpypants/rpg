@@ -9,6 +9,7 @@ var display = {
 
   //cards
   cardImage: document.getElementById("card"),
+  cardImage: document.getElementById("card_enemy"),
   cardW: 180,
   cardH: 265,
 
