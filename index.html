@@ -121,9 +121,6 @@ window.onload = function() {
     canv.addEventListener("click", onClick);
     canv.addEventListener("mousemove", updateMouse);
     ctx = canv.getContext("2d");
-    canv.width = 1000;
-    canv.height = 600;
-
     start();
     setInterval(loop, 1000 / fps);
   }
